@@ -45,6 +45,16 @@ export default {
       )
     }
   },
+  watch: {
+    // 正确示例：Vue 能侦测到 count 变量的改变。可以在控制台中查看结果
+    count: function (newValue, oldValue) {
+      console.log(`count 改变了！newValue:${newValue}, oldValue${oldValue}`)
+    },
+    // 错误示例：Vue 检测不到数组中元素的属性改变，所以下面的控制台打印不会输出
+    todoList: function (newValue, oldValue) {
+      console.log(`todoList 改变了！newValue:${newValue}, oldValue${oldValue}`)
+    }
+  },
   methods: {
     toggle (todoItem) {
       todoItem.done = !todoItem.done
