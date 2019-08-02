@@ -10,7 +10,7 @@
         </label>
       </li>
     </ol>
-    <div>未完成数量：{{ calculateUnone }}</div>
+    <div>未完成数量：{{ calculateUndone }}</div>
     <div>已完成数量：{{ calculateDone }}</div>
     <div>已完成数量：{{ calculateDone2() }}</div>
     <button @click="accessComputed">点我访问计算属性</button>
@@ -30,19 +30,15 @@ export default {
     }
   },
   computed: {
-    calculateUnone () {
+    calculateUndone () {
       return this.todoList.filter(item => {
         return item.done === false
       }).length
     },
     calculateDone () {
-      return (
-        this.todoList.filter(item => {
-          return item.done
-        }).length +
-        '，当前时间：' +
-        new Date()
-      )
+      return this.todoList.filter(item => {
+        return item.done
+      }).length + '，当前时间：' + new Date()
     }
   },
   watch: {
@@ -61,11 +57,9 @@ export default {
       this.count++
     },
     calculateDone2 () {
-      return (
-        this.todoList.filter(item => {
-          return item.done
-        }).length + '，当前时间：' + new Date()
-      )
+      return this.todoList.filter(item => {
+        return item.done
+      }).length + '，当前时间：' + new Date()
     },
     accessComputed () {
       console.log(this.calculateDone)
