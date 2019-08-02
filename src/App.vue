@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div class="app-container">
     <h2>Vue 待办事项：</h2>
     <ol>
       <li v-for="(item,index) in todoList" :key="index">
@@ -74,14 +74,14 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 body {
   background: #20262E;
   padding: 20px;
   font-family: Helvetica, serif;
 }
 
-#app {
+.app-container {
   background: #fff;
   border-radius: 4px;
   padding: 20px;
