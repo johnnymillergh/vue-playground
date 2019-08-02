@@ -4,15 +4,9 @@
     <ol>
       <li v-for="(item,index) in todoList" :key="index">
         <label>
-          <input type="checkbox"
-                 v-on:change="toggle(item)"
-                 v-bind:checked="item.done">
-          <del v-if="item.done">
-            {{ item.text }}
-          </del>
-          <span v-else>
-          {{ item.text }}
-        </span>
+          <input type="checkbox" v-on:change="toggle(item)" v-bind:checked="item.done">
+          <del v-if="item.done">{{ item.text }}</del>
+          <span v-else>{{ item.text }}</span>
         </label>
       </li>
     </ol>
