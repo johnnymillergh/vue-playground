@@ -2,7 +2,11 @@
   <div>
     <h1>父组件传给子组件的Message: {{ messageFromParent }}</h1>
     <label>
-      <input type="text" v-model="inputText" placeholder="请输入要发送给父组件的信息" @blur="onBlurInput"/>
+      <input class="input-box"
+             type="text"
+             v-model="inputText"
+             placeholder="请输入要发送给父组件的信息，然后查看控制台"
+             @blur="onBlurInput"/>
     </label>
   </div>
 </template>
@@ -33,5 +37,7 @@ export default {
 </script>
 
 <style scoped>
-
+.input-box {
+  width: 250px;
+}
 </style>
