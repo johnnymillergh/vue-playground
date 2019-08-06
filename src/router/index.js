@@ -5,6 +5,7 @@ import Login from '@/views/Login'
 import Page1 from '@/views/Page1.vue'
 import Page2 from '@/views/Page2.vue'
 import TodoList from '@/views/TodoList'
+import ElementUIDemo from '@/views/ElementUIDemo'
 
 Vue.use(Router)
 
@@ -28,6 +29,10 @@ export const constantRouterMap = [
       {
         path: 'todo-list',
         component: TodoList
+      },
+      {
+        path: 'element-ui-demo',
+        component: ElementUIDemo
       }
     ]
   },
