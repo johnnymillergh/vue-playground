@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Layout from '../layout'
-import Login from '../login'
-import App1 from '../App1.vue'
-import App2 from '../App2.vue'
+import Login from '../views/Login'
+import Page1 from '../views/Page1.vue'
+import Page2 from '../views/Page2.vue'
 
 Vue.use(Router)
 
@@ -13,12 +13,12 @@ export const constantRouterMap = [
     component: Layout,
     children: [
       {
-        path: 'app1',
-        component: App1
+        path: 'page1',
+        component: Page1
       },
       {
-        path: 'app2',
-        component: App2
+        path: 'page1',
+        component: Page2
       }
     ]
   },
@@ -27,12 +27,12 @@ export const constantRouterMap = [
     component: Login
   },
   {
-    path: '/app1',
-    component: App1
+    path: '/page1',
+    component: Page1
   },
   {
-    path: '/app2',
-    component: App2
+    path: '/page2',
+    component: Page2
   }
 ]
 

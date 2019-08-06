@@ -4,10 +4,6 @@
 
 <script>
 export default {
-  name: 'login'
+  name: 'Login'
 }
 </script>
-
-<style scoped>
-
-</style>
