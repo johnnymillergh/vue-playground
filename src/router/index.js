@@ -4,6 +4,7 @@ import Layout from '@/layout'
 import Login from '@/views/Login'
 import Page1 from '@/views/Page1.vue'
 import Page2 from '@/views/Page2.vue'
+import TodoList from '@/views/TodoList'
 
 Vue.use(Router)
 
@@ -23,6 +24,10 @@ export const constantRouterMap = [
       {
         path: 'page2',
         component: Page2
+      },
+      {
+        path: 'todo-list',
+        component: TodoList
       }
     ]
   },
