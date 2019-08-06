@@ -17,7 +17,7 @@ export const constantRouterMap = [
         component: Page1
       },
       {
-        path: 'page1',
+        path: 'page2',
         component: Page2
       }
     ]
