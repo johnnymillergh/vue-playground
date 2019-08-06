@@ -9,6 +9,10 @@ Vue.use(Router)
 
 export const constantRouterMap = [
   {
+    path: '/',
+    component: Layout
+  },
+  {
     path: '/parent',
     component: Layout,
     children: [
