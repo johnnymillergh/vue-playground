@@ -19,8 +19,10 @@ export default {
     }
   },
   methods: {
-    onReceive (message) {
+    onReceive (message, message2, message3) {
       console.log('父组件接收到了子组件传来的信息，message =', message)
+      console.log('父组件接收到了子组件传来的信息，message2 =', message2)
+      console.log('父组件接收到了子组件传来的信息，message3 =', message3)
     }
   }
 }

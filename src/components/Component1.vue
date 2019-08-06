@@ -26,7 +26,7 @@ export default {
   },
   methods: {
     onBlurInput () {
-      this.$emit('send-input-text', this.inputText)
+      this.$emit('send-input-text', this.inputText, '第二个参数', '第三个参数')
     }
   }
 }
