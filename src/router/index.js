@@ -6,6 +6,7 @@ import Page1 from '@/views/Page1.vue'
 import Page2 from '@/views/Page2.vue'
 import TodoList from '@/views/TodoList'
 import ElementUIDemo from '@/views/ElementUIDemo'
+import PromiseDemo from '@/views/PromiseDemo'
 
 Vue.use(Router)
 
@@ -33,6 +34,10 @@ export const constantRouterMap = [
       {
         path: 'element-ui-demo',
         component: ElementUIDemo
+      },
+      {
+        path: 'promise-demo',
+        component: PromiseDemo
       }
     ]
   },
