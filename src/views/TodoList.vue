@@ -26,7 +26,11 @@ export default {
         { text: '学习 ECMAScript', done: false },
         { text: '学习 Vue', done: false }
       ],
-      count: 0
+      count: 0,
+      myObject: {
+        id: 0,
+        name: 'My Object'
+      }
     }
   },
   computed: {
@@ -46,9 +50,17 @@ export default {
     count: function (newValue, oldValue) {
       console.log(`count 改变了！newValue:${newValue}, oldValue${oldValue}`)
     },
-    // 错误示例：Vue 检测不到数组中元素的属性改变，所以下面的控制台打印不会输出
-    todoList: function (newValue, oldValue) {
-      console.log(`todoList 改变了！newValue:${newValue}, oldValue${oldValue}`)
+    todoList: {
+      deep: true,
+      handler (newValue, oldValue) {
+        console.log(`todoList 改变了！newValue:`, newValue, `oldValue`, oldValue)
+      }
+    },
+    myObject: {
+      deep: true,
+      handler (newValue, oldValue) {
+        console.log(`myObject 改变了！newValue:`, newValue, `oldValue`, oldValue)
+      }
     }
   },
   methods: {
@@ -62,8 +74,8 @@ export default {
       }).length + '，当前时间：' + new Date()
     },
     accessComputed () {
-      console.log(this.calculateDone)
-      this.testMethod11111()
+      this.todoList = [1, 2, 3]
+      this.myObject.id = Math.random()
     },
     testMethod () {
       console.log('测试方法')
